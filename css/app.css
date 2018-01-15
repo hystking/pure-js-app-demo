@@ -53,15 +53,16 @@ body,
   display: grid;
   position: absolute;
   top: 15px;
-  right: 15px;
-  bottom: 15px;
   left: 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
   padding: 0 15px;
   margin: auto;
   max-width: 375px;
   max-height: 600px;
   grid-template-columns: 1fr;
   justify-items: center;
+  box-sizing: border-box;
 }
 
 .view--title {
