@@ -140,8 +140,8 @@ body,
   user-select: none;
 }
 
-.button:active {
-  animation: button-pressed 1s linear 1 forwards;
+.button:hover {
+  opacity: 0.5;
 }
 
 .button:first-child {

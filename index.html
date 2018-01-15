@@ -11,7 +11,7 @@
     <div id="incompatible-message" class="incompatible-message">ごめんなさい！<br/>このブラウザは非対応みたいです！<br/><br/>最新版の Google Chrome, iOS Safari で<br/>ご覧ください。</div>
     <div class="app" id="app">
       <transition name="view-" :duration="{ enter: 500, leave: 500 }">
-        <div class="view view--title" v-if="view == 'title'">
+        <div class="view view--title" v-if="view === 'title'">
           <div class="view__cell view__cell--top">
             <div class="text text--size-big">ES2015 クイズ！</div>
             <div class="text">（2018年版）</div>
@@ -20,7 +20,7 @@
             <button class="button button--primary" v-on:click="changeView('quiz')">はじめる</button>
           </div>
         </div>
-        <div class="view view--quiz" v-if="view == 'quiz'" :key="currentQuizIndex">
+        <div class="view view--quiz" v-if="view === 'quiz'" :key="currentQuizIndex">
           <div class="view__cell view__cell--top">
             <div class="text text--size-big">第{{currentQuizIndex + 1}}問</div>
             <div class="text">{{currentQuiz.text}}</div>
@@ -28,12 +28,11 @@
           <div v-for="(choice, index) in currentQuiz.choices" class="view__cell" :class="`view__cell--delay-${index}`">
             <button
               class="button button--choice"
-              :class="{ 'button--pressed': answers.get(currentQuiz.id) === choice.id }"
               v-on:click="answer(currentQuiz.id, choice.id)"
             >{{choice.text}}</button>
           </div>
         </div>
-        <div class="view view--result" v-if="view == 'result'">
+        <div class="view view--result" v-if="view === 'result'">
           <div class="view__cell view__cell--top">
             <div class="text">あなたの正解数は……</div>
             <div class="result-message">
