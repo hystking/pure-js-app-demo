@@ -1,0 +1,207 @@
+@import 'keyframes.css';
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "游ゴシック", 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', "Meiryo", "メイリオ", sans-serif;
+}
+
+html,
+body,
+.app {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.incompatible-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  color: #333;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.5;
+  opacity: 0;
+  animation: fade-appear 0s linear 2s 1 forwards;
+}
+
+.app {
+  display: none;
+}
+
+.app:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border: solid 4px #ddd;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.view {
+  display: grid;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 0 15px;
+  margin: auto;
+  max-width: 375px;
+  max-height: 600px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.view--title {
+  grid-template-rows: 70% 30%;
+}
+
+.view--quiz {
+  grid-template-rows: 32% 17% 17% 17% 17%;
+}
+
+.view--result {
+  grid-template-rows: 70% 30%;
+}
+
+.view__cell {
+  opacity: 0;
+}
+
+.view__cell--delay-0 {
+  animation: fade-appear 0.2s linear 2.0s 1 forwards;
+}
+
+.view__cell--delay-1 {
+  animation: fade-appear 0.2s linear 2.3s 1 forwards;
+}
+
+.view__cell--delay-2 {
+  animation: fade-appear 0.2s linear 2.6s 1 forwards;
+}
+
+.view__cell--delay-3 {
+  animation: fade-appear 0.2s linear 2.9s 1 forwards;
+}
+
+.view__cell--delay-7 {
+  animation: fade-appear 0.2s linear 4.1s 1 forwards;
+}
+
+.view__cell--top {
+  align-self: center;
+  animation: fade-appear 0.2s linear 1.0s 1 forwards;
+}
+
+.view--leave-active {
+  transition: opacity 0.25s 0s;
+}
+
+.view--enter-active {
+  transition: opacity 0s 0.5s;
+}
+
+.view--enter, .view--leave-to {
+  opacity: 0;
+}
+
+.button {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  height: 64px;
+  padding: 0 1em;
+  border-radius: 10px;
+  margin: 32px 0;
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 60px;
+  color: #333;
+  background: rgba(0, 0, 0, 0);
+  border: solid 2px #333;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:active {
+  animation: button-pressed 1s linear 1 forwards;
+}
+
+.button:first-child {
+  margin-top: 0;
+}
+
+.button:last-child {
+  margin-bottom: 0;
+}
+
+.button--choice {
+  width: 300px;
+  padding: 0;
+  font-size: 16px;
+  font-family: Monaco, Consolas, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.button--primary {
+  animation: button-loop 1.5s linear infinite both;
+  background: #d33;
+  border-color: #d33;
+  color: #fff;
+}
+
+.text {
+  margin: 0.5em 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.text--size-big {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.text--result {
+  transform: scale(0, 0);
+  animation: pop-appear 1s linear 2.5s 1 forwards;
+}
+
+.result-message {
+  position: relative;
+}
+
+.result-message__tettere- {
+  opacity: 0;
+  animation: fade-appear 0.3s linear 2.5s 1 forwards;
+}
+
+.result-message__tettere-:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  background: url("../img/tettere-.jpg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  animation: rotate360 6s linear 0s infinite both;
+}

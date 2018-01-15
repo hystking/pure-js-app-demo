@@ -1,0 +1,152 @@
+[
+  {
+    "id": 0,
+    "text": "ブロックスコープで定数を宣言するための修飾子はどれ？",
+    "correctChoices": [
+      0
+    ],
+    "choices": [
+      {
+        "id": 0,
+        "text": "const"
+      },
+      {
+        "id": 1,
+        "text": "let"
+      },
+      {
+        "id": 2,
+        "text": "var"
+      },
+      {
+        "id": 3,
+        "text": "static"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "text": "Class を継承するときに使うキーワードはどれ？",
+    "correctChoices": [
+      0
+    ],
+    "choices": [
+      {
+        "id": 0,
+        "text": "extend"
+      },
+      {
+        "id": 1,
+        "text": "inherit"
+      },
+      {
+        "id": 2,
+        "text": "interface"
+      },
+      {
+        "id": 3,
+        "text": "abstract"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Promise でエラーをハンドリングするときに使うメソッドはどれ？",
+    "correctChoices": [
+      0
+    ],
+    "choices": [
+      {
+        "id": 0,
+        "text": "catch"
+      },
+      {
+        "id": 1,
+        "text": "except"
+      },
+      {
+        "id": 2,
+        "text": "fail"
+      },
+      {
+        "id": 3,
+        "text": "error"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "モジュールを読み込むときに使うキーワードはどれ？",
+    "correctChoices": [
+      0
+    ],
+    "choices": [
+      {
+        "id": 0,
+        "text": "import"
+      },
+      {
+        "id": 1,
+        "text": "package"
+      },
+      {
+        "id": 2,
+        "text": "include"
+      },
+      {
+        "id": 3,
+        "text": "use"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "テンプレートリテラルで変数を埋め込むときに使う書式は次のうちどれ？",
+    "correctChoices": [
+      0
+    ],
+    "choices": [
+      {
+        "id": 0,
+        "text": "${hoge}"
+      },
+      {
+        "id": 1,
+        "text": "#{hoge}"
+      },
+      {
+        "id": 2,
+        "text": "@{hoge}"
+      },
+      {
+        "id": 3,
+        "text": "<%= hoge %>"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "async 関数の正しい宣言の仕方はどれ？",
+    "correctChoices": [
+      0
+    ],
+    "choices": [
+      {
+        "id": 0,
+        "text": "async function myFunc() {}"
+      },
+      {
+        "id": 1,
+        "text": "function async myFunc() {}"
+      },
+      {
+        "id": 2,
+        "text": "function myFunc() async {}"
+      },
+      {
+        "id": 3,
+        "text": "function* myFunc() {}"
+      }
+    ]
+  }
+]
