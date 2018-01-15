@@ -26,10 +26,7 @@ const app = new Vue({
   methods: {
     getShuffledQuizzes() {
       return shuffled(this.originalQuizzes).map(quiz => {
-        return {
-          ...quiz,
-          choices: shuffled(quiz.choices),
-        };
+        return Object.assign({}, quiz, { choices: shuffled(quiz.choices) });
       });
     },
 
