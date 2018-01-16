@@ -177,11 +177,13 @@ body,
 .text--size-big {
   font-size: 32px;
   font-weight: bold;
+  user-select: none;
 }
 
 .text--result {
   transform: scale(0, 0);
   animation: pop-appear 1s linear 2.5s 1 forwards;
+  user-select: none;
 }
 
 .result-message {
